@@ -12,6 +12,7 @@ target "BDDReactiveCocoa" do
 end
 
 target "BDDReactiveCocoaSpecs", :exclusive => true do
+  pod "MagicalRecord"
   pod "Specta"
   pod "Expecta"
   pod "OCHamcrest"

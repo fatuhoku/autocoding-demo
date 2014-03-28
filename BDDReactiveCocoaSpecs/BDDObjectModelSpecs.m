@@ -16,6 +16,10 @@
 #import "MESContinent.h"
 #import "HRCoder.h"
 #import "NSArray+F.h"
+#import "MagicalRecord+Setup.h"
+#import "NSManagedObject+MagicalRecord.h"
+#import "NSManagedObjectContext+MagicalRecord.h"
+#import "NSManagedObjectContext+MagicalSaves.h"
 
 #define HC_SHORTHAND
 #import <OCHamcrest/OCHamcrest.h>
@@ -24,54 +28,40 @@
 
 SpecBegin(BDDObjectModel)
 
-describe(@"Complex data models", ^{
-    context(@"when encoded into JSON", ^{
-        it(@"should yield its JSON representation", ^{
-            MESLanguage *english = [MESLanguage languageWithName:@"English"]; // mutate to British English
-            MESLanguage *french = [MESLanguage languageWithName:@"French"];
-            MESLanguage *german = [MESLanguage languageWithName:@"German"];
+describe(@"Serializing Core Data objects with AutoCoding", ^{
+    beforeEach(^{
+        [MagicalRecord setupCoreDataStackWithInMemoryStore];
+    });
+    afterEach(^{
+        [MagicalRecord cleanUp];
+    });
+    context(@"when working with AutoCoding", ^{
+        it(@"should be freaking awesome", ^{
+            MESContinent *europe = [MESContinent MR_createEntity];
+            europe.name = @"Europe";
+            MESCountry *germany = [MESCountry MR_createEntity];
+            germany.name = @"Germany";
+            [europe addCountriesObject:germany];
+            MESCountry *austria = [MESCountry MR_createEntity];
+            austria.name = @"Austria";
+            [europe addCountriesObject:austria];
+            MESLanguage *german = [MESLanguage MR_createEntity];
+            german.name = @"Deutsch";
+            [germany addOfficialLanguagesObject:german];
+            [austria addOfficialLanguagesObject:german];
 
-            MESCountry *uk = [MESCountry countryWithName:@"United Kingdom" officialLanguages:@[english]];
-            MESCountry *germany = [MESCountry countryWithName:@"Germany" officialLanguages:@[german]];
-            MESCountry *switzerland = [MESCountry countryWithName:@"Switzerland" officialLanguages:@[french, german]];
-
-
-            MESContinent *europe = [MESContinent continentWithName:@"Europe" countries:@[uk, germany, switzerland]];
-
-            // Invariant Property
-            expect(germany.officialLanguages[0]).to.equal(switzerland.officialLanguages[1]);
-
-            // Okay. Get the string for this
-            id dictionary = [HRCoder archivedJSONWithRootObject:europe];
-
-            // Okay, now the string represe
-            NSError *error;
-            NSData *x = [NSJSONSerialization dataWithJSONObject:dictionary options:nil error:&error];
-            if (error) {
-                [NSException raise:@"Serialization problem." format:@"%@", error.localizedDescription];
-            }
-            // Let's load the object back out.
-            id thing = [NSJSONSerialization JSONObjectWithData:x options:nil error:&error];
-            if (error) {
-                [NSException raise:@"Deserialization problem." format:@"%@", error.localizedDescription];
-            }
-            MESContinent *continent = [HRCoder unarchiveObjectWithPlistOrJSON:thing];
-            NSLog(@"Continent: %@", continent);
-            // Great. If we edit the language of the UK to 'British English'...
-            MESCountry *uk2 = [continent.countries firstObject];
-            MESCountry *germany2 = continent.countries[1];
-            MESCountry *switzerland2 = continent.countries[2];
-            expect(uk2.name).to.equal(@"United Kingdom");
-            expect(switzerland2.name).to.equal(@"Switzerland");
-            expect(germany2.name).to.equal(@"Germany");
-            MESLanguage *english2 = uk2.officialLanguages.first;
-            // We should see that the Germans have changed their language too.
-
-            expect(germany2.officialLanguages[0]).to.equal(switzerland2.officialLanguages[1]);
-            NSLog(@"The second official language of Switzerland is: %@", switzerland2.officialLanguages[1]);
-            ((MESLanguage *)switzerland2.officialLanguages[1]).name = @"Swissdootch";
-            NSString *nameOfGermanyOfficialLanguage = ((MESLanguage *)germany2.officialLanguages[0]).name;
-            expect(nameOfGermanyOfficialLanguage).to.equal(@"Swissdootch");
+            // Save the context.
+            [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:nil];
+            
+            // Now; write europe
+            NSError *error = nil;
+            NSData *data = [NSJSONSerialization dataWithJSONObject:[HRCoder archivedJSONWithRootObject:europe]
+                                                           options:NSJSONWritingPrettyPrinted
+                                                             error:&error];
+            NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            expect(string).to.contain(@"Germany");
+            expect(string).to.contain(@"Austria");
+            expect(string).to.contain(@"Deutsch");
         });
     });
 });
