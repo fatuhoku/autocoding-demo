@@ -1,0 +1,740 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		0B76779818E1C6EC0037767F /* Mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0B76779918E1C6EC0037767F /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
+			buildPhases = (
+				0B76779C18E1C6FD0037767F /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Mogenerator;
+			productName = Mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0B6B08C518DF035C00DCB5CA /* MESLanguageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6B08C418DF035C00DCB5CA /* MESLanguageDetailViewController.m */; };
+		0BCFAF2B18E58ABE00D9292D /* MESJsonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCFAF2A18E58ABE00D9292D /* MESJsonViewController.m */; };
+		0BD42F4918E1C94900B3A1FC /* LanguagesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BD42F4718E1C94900B3A1FC /* LanguagesModel.xcdatamodeld */; };
+		0BD42F5018E1CA9800B3A1FC /* _MESContinent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD42F4B18E1CA9800B3A1FC /* _MESContinent.m */; };
+		0BD42F5118E1CA9800B3A1FC /* _MESCountry.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD42F4D18E1CA9800B3A1FC /* _MESCountry.m */; };
+		0BD42F5218E1CA9800B3A1FC /* _MESLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD42F4F18E1CA9800B3A1FC /* _MESLanguage.m */; };
+		0BD42F5418E1E16000B3A1FC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD42F5318E1E16000B3A1FC /* CoreData.framework */; };
+		0BD42F5718E201A800B3A1FC /* MESCountriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD42F5618E201A800B3A1FC /* MESCountriesViewController.m */; };
+		0BD42F5A18E201CD00B3A1FC /* MESLanguagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD42F5918E201CD00B3A1FC /* MESLanguagesViewController.m */; };
+		0BF211A318D1FA6900085F2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF211A218D1FA6900085F2E /* Foundation.framework */; };
+		0BF211A518D1FA6900085F2E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF211A418D1FA6900085F2E /* CoreGraphics.framework */; };
+		0BF211A718D1FA6900085F2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF211A618D1FA6900085F2E /* UIKit.framework */; };
+		0BF211AD18D1FA6900085F2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0BF211AB18D1FA6900085F2E /* InfoPlist.strings */; };
+		0BF211AF18D1FA6900085F2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF211AE18D1FA6900085F2E /* main.m */; };
+		0BF211B318D1FA6900085F2E /* MESAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF211B218D1FA6900085F2E /* MESAppDelegate.m */; };
+		0BF211B618D1FA6900085F2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BF211B418D1FA6900085F2E /* Main.storyboard */; };
+		0BF211BB18D1FA6900085F2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BF211BA18D1FA6900085F2E /* Images.xcassets */; };
+		0BF211DC18D1FAD300085F2E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF211C118D1FA6900085F2E /* XCTest.framework */; };
+		0BF211DD18D1FAD300085F2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF211A218D1FA6900085F2E /* Foundation.framework */; };
+		0BF211DE18D1FAD300085F2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF211A618D1FA6900085F2E /* UIKit.framework */; };
+		0BF211E418D1FAD300085F2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0BF211E218D1FAD300085F2E /* InfoPlist.strings */; };
+		0BF211E618D1FAD300085F2E /* BDDReactiveCocoaSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF211E518D1FAD300085F2E /* BDDReactiveCocoaSpecs.m */; };
+		17D56C6A07C2451CB7E887A6 /* libPods-BDDReactiveCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8B0995B489A43BB97A58EF9 /* libPods-BDDReactiveCocoa.a */; };
+		6A9F43A2406D40B79C6F1A26 /* libPods-BDDReactiveCocoaSpecs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3942C71BC104B9080BA3AEF /* libPods-BDDReactiveCocoaSpecs.a */; };
+		E22BA30B47DA566099DC8597 /* MESCounterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E22BA0EAC3ABA609099FE593 /* MESCounterViewModel.m */; };
+		E22BA4C7F373F435255188D4 /* BDDObjectModelSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E22BAD96A3995D7F08DEE30E /* BDDObjectModelSpecs.m */; };
+		E22BA8D2E77C17FFB874E9B9 /* MESContinent.m in Sources */ = {isa = PBXBuildFile; fileRef = E22BAF9666CEA912A94F3DF3 /* MESContinent.m */; };
+		E22BAC7DED712F449304CED5 /* MESCountry.m in Sources */ = {isa = PBXBuildFile; fileRef = E22BA4DE02F4B7FFBB0E0C4E /* MESCountry.m */; };
+		E22BADD36978DF6194611A3B /* MESCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = E22BA44F77257EBE4D7BA63C /* MESCounter.m */; };
+		E22BADE5A081F80191A35C99 /* MESLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = E22BA7ED883018B7B6A72EF1 /* MESLanguage.m */; };
+		E22BAED0BFB9734DD67713D3 /* MESContinentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22BA759EAA2FB87D11C9D1C /* MESContinentViewController.m */; };
+		E22BAFAF75D3471219648AD6 /* MESModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E22BA27A1554BE8384034168 /* MESModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0BF211E818D1FAD300085F2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BF2119718D1FA6900085F2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BF2119E18D1FA6900085F2E;
+			remoteInfo = BDDReactiveCocoa;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A9FEA1A591C4A128E14B402 /* Pods-BDDReactiveCocoaSpecs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDDReactiveCocoaSpecs.xcconfig"; path = "Pods/Pods-BDDReactiveCocoaSpecs.xcconfig"; sourceTree = "<group>"; };
+		0B6B08C318DF035C00DCB5CA /* MESLanguageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MESLanguageDetailViewController.h; sourceTree = "<group>"; };
+		0B6B08C418DF035C00DCB5CA /* MESLanguageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MESLanguageDetailViewController.m; sourceTree = "<group>"; };
+		0BCFAF2918E58ABE00D9292D /* MESJsonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MESJsonViewController.h; sourceTree = "<group>"; };
+		0BCFAF2A18E58ABE00D9292D /* MESJsonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MESJsonViewController.m; sourceTree = "<group>"; };
+		0BD42F4818E1C94900B3A1FC /* LanguagesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LanguagesModel.xcdatamodel; sourceTree = "<group>"; };
+		0BD42F4A18E1CA9800B3A1FC /* _MESContinent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _MESContinent.h; sourceTree = "<group>"; };
+		0BD42F4B18E1CA9800B3A1FC /* _MESContinent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _MESContinent.m; sourceTree = "<group>"; };
+		0BD42F4C18E1CA9800B3A1FC /* _MESCountry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _MESCountry.h; sourceTree = "<group>"; };
+		0BD42F4D18E1CA9800B3A1FC /* _MESCountry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _MESCountry.m; sourceTree = "<group>"; };
+		0BD42F4E18E1CA9800B3A1FC /* _MESLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _MESLanguage.h; sourceTree = "<group>"; };
+		0BD42F4F18E1CA9800B3A1FC /* _MESLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _MESLanguage.m; sourceTree = "<group>"; };
+		0BD42F5318E1E16000B3A1FC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0BD42F5518E201A800B3A1FC /* MESCountriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MESCountriesViewController.h; sourceTree = "<group>"; };
+		0BD42F5618E201A800B3A1FC /* MESCountriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MESCountriesViewController.m; sourceTree = "<group>"; };
+		0BD42F5818E201CD00B3A1FC /* MESLanguagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MESLanguagesViewController.h; sourceTree = "<group>"; };
+		0BD42F5918E201CD00B3A1FC /* MESLanguagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MESLanguagesViewController.m; sourceTree = "<group>"; };
+		0BF2119F18D1FA6900085F2E /* BDDReactiveCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BDDReactiveCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BF211A218D1FA6900085F2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0BF211A418D1FA6900085F2E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0BF211A618D1FA6900085F2E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0BF211AA18D1FA6900085F2E /* BDDReactiveCocoa-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BDDReactiveCocoa-Info.plist"; sourceTree = "<group>"; };
+		0BF211AC18D1FA6900085F2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0BF211AE18D1FA6900085F2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0BF211B018D1FA6900085F2E /* BDDReactiveCocoa-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BDDReactiveCocoa-Prefix.pch"; sourceTree = "<group>"; };
+		0BF211B118D1FA6900085F2E /* MESAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MESAppDelegate.h; sourceTree = "<group>"; };
+		0BF211B218D1FA6900085F2E /* MESAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MESAppDelegate.m; sourceTree = "<group>"; };
+		0BF211B518D1FA6900085F2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0BF211BA18D1FA6900085F2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0BF211C118D1FA6900085F2E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0BF211DB18D1FAD300085F2E /* BDDReactiveCocoaSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BDDReactiveCocoaSpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BF211E118D1FAD300085F2E /* BDDReactiveCocoaSpecs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BDDReactiveCocoaSpecs-Info.plist"; sourceTree = "<group>"; };
+		0BF211E318D1FAD300085F2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0BF211E518D1FAD300085F2E /* BDDReactiveCocoaSpecs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDDReactiveCocoaSpecs.m; sourceTree = "<group>"; };
+		0BF211E718D1FAD300085F2E /* BDDReactiveCocoaSpecs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BDDReactiveCocoaSpecs-Prefix.pch"; sourceTree = "<group>"; };
+		2D55EE75199545C5B8A14AAC /* Pods-BDDReactiveCocoa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDDReactiveCocoa.xcconfig"; path = "Pods/Pods-BDDReactiveCocoa.xcconfig"; sourceTree = "<group>"; };
+		E22BA0EAC3ABA609099FE593 /* MESCounterViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MESCounterViewModel.m; sourceTree = "<group>"; };
+		E22BA27A1554BE8384034168 /* MESModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MESModel.m; sourceTree = "<group>"; };
+		E22BA352EF12D3A1041583FC /* MESContinent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MESContinent.h; sourceTree = "<group>"; };
+		E22BA3C6698FB579DF6A080F /* MESLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MESLanguage.h; sourceTree = "<group>"; };
+		E22BA44F77257EBE4D7BA63C /* MESCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MESCounter.m; sourceTree = "<group>"; };
+		E22BA4DE02F4B7FFBB0E0C4E /* MESCountry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MESCountry.m; sourceTree = "<group>"; };
+		E22BA5350D6EE7516F2D1746 /* MESCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MESCounter.h; sourceTree = "<group>"; };
+		E22BA759EAA2FB87D11C9D1C /* MESContinentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MESContinentViewController.m; sourceTree = "<group>"; };
+		E22BA7ED883018B7B6A72EF1 /* MESLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MESLanguage.m; sourceTree = "<group>"; };
+		E22BA842733E087E00F8BF46 /* MESContinentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MESContinentViewController.h; sourceTree = "<group>"; };
+		E22BA9F0FB7DEF4A214009B4 /* MESCountry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MESCountry.h; sourceTree = "<group>"; };
+		E22BAB49B9BBC77342596388 /* MESModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MESModel.h; sourceTree = "<group>"; };
+		E22BAD776D083DDAE722BA3F /* MESCounterViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MESCounterViewModel.h; sourceTree = "<group>"; };
+		E22BAD96A3995D7F08DEE30E /* BDDObjectModelSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDDObjectModelSpecs.m; sourceTree = "<group>"; };
+		E22BAF9666CEA912A94F3DF3 /* MESContinent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MESContinent.m; sourceTree = "<group>"; };
+		E8B0995B489A43BB97A58EF9 /* libPods-BDDReactiveCocoa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BDDReactiveCocoa.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3942C71BC104B9080BA3AEF /* libPods-BDDReactiveCocoaSpecs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BDDReactiveCocoaSpecs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0BF2119C18D1FA6900085F2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BD42F5418E1E16000B3A1FC /* CoreData.framework in Frameworks */,
+				0BF211A518D1FA6900085F2E /* CoreGraphics.framework in Frameworks */,
+				0BF211A718D1FA6900085F2E /* UIKit.framework in Frameworks */,
+				0BF211A318D1FA6900085F2E /* Foundation.framework in Frameworks */,
+				17D56C6A07C2451CB7E887A6 /* libPods-BDDReactiveCocoa.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BF211D818D1FAD300085F2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BF211DC18D1FAD300085F2E /* XCTest.framework in Frameworks */,
+				0BF211DE18D1FAD300085F2E /* UIKit.framework in Frameworks */,
+				0BF211DD18D1FAD300085F2E /* Foundation.framework in Frameworks */,
+				6A9F43A2406D40B79C6F1A26 /* libPods-BDDReactiveCocoaSpecs.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B6B08C618DF037F00DCB5CA /* AutosaveDemo */ = {
+			isa = PBXGroup;
+			children = (
+				0BD42F4718E1C94900B3A1FC /* LanguagesModel.xcdatamodeld */,
+				0B6B08C318DF035C00DCB5CA /* MESLanguageDetailViewController.h */,
+				0B6B08C418DF035C00DCB5CA /* MESLanguageDetailViewController.m */,
+				0BD42F5518E201A800B3A1FC /* MESCountriesViewController.h */,
+				0BD42F5618E201A800B3A1FC /* MESCountriesViewController.m */,
+				0BD42F5818E201CD00B3A1FC /* MESLanguagesViewController.h */,
+				0BD42F5918E201CD00B3A1FC /* MESLanguagesViewController.m */,
+				0BCFAF2918E58ABE00D9292D /* MESJsonViewController.h */,
+				0BCFAF2A18E58ABE00D9292D /* MESJsonViewController.m */,
+				E22BA759EAA2FB87D11C9D1C /* MESContinentViewController.m */,
+				E22BA842733E087E00F8BF46 /* MESContinentViewController.h */,
+			);
+			name = AutosaveDemo;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0BF2119618D1FA6900085F2E = {
+			isa = PBXGroup;
+			children = (
+				0BF211A818D1FA6900085F2E /* BDDReactiveCocoa */,
+				0BF211DF18D1FAD300085F2E /* BDDReactiveCocoaSpecs */,
+				0BF211A118D1FA6900085F2E /* Frameworks */,
+				0BF211A018D1FA6900085F2E /* Products */,
+				0A9FEA1A591C4A128E14B402 /* Pods-BDDReactiveCocoaSpecs.xcconfig */,
+				2D55EE75199545C5B8A14AAC /* Pods-BDDReactiveCocoa.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		0BF211A018D1FA6900085F2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0BF2119F18D1FA6900085F2E /* BDDReactiveCocoa.app */,
+				0BF211DB18D1FAD300085F2E /* BDDReactiveCocoaSpecs.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0BF211A118D1FA6900085F2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BD42F5318E1E16000B3A1FC /* CoreData.framework */,
+				0BF211A218D1FA6900085F2E /* Foundation.framework */,
+				0BF211A418D1FA6900085F2E /* CoreGraphics.framework */,
+				0BF211A618D1FA6900085F2E /* UIKit.framework */,
+				0BF211C118D1FA6900085F2E /* XCTest.framework */,
+				F3942C71BC104B9080BA3AEF /* libPods-BDDReactiveCocoaSpecs.a */,
+				E8B0995B489A43BB97A58EF9 /* libPods-BDDReactiveCocoa.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0BF211A818D1FA6900085F2E /* BDDReactiveCocoa */ = {
+			isa = PBXGroup;
+			children = (
+				0B6B08C618DF037F00DCB5CA /* AutosaveDemo */,
+				0BF211B118D1FA6900085F2E /* MESAppDelegate.h */,
+				0BF211B218D1FA6900085F2E /* MESAppDelegate.m */,
+				0BF211B418D1FA6900085F2E /* Main.storyboard */,
+				0BF211BA18D1FA6900085F2E /* Images.xcassets */,
+				0BF211A918D1FA6900085F2E /* Supporting Files */,
+				E22BA06108788B3D8F3597F1 /* Model */,
+			);
+			path = BDDReactiveCocoa;
+			sourceTree = "<group>";
+		};
+		0BF211A918D1FA6900085F2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0BF211AA18D1FA6900085F2E /* BDDReactiveCocoa-Info.plist */,
+				0BF211AB18D1FA6900085F2E /* InfoPlist.strings */,
+				0BF211AE18D1FA6900085F2E /* main.m */,
+				0BF211B018D1FA6900085F2E /* BDDReactiveCocoa-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0BF211DF18D1FAD300085F2E /* BDDReactiveCocoaSpecs */ = {
+			isa = PBXGroup;
+			children = (
+				0BF211E518D1FAD300085F2E /* BDDReactiveCocoaSpecs.m */,
+				0BF211E018D1FAD300085F2E /* Supporting Files */,
+				E22BA274E04CC16D25C7CD16 /* Legacy */,
+				E22BAD96A3995D7F08DEE30E /* BDDObjectModelSpecs.m */,
+			);
+			path = BDDReactiveCocoaSpecs;
+			sourceTree = "<group>";
+		};
+		0BF211E018D1FAD300085F2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0BF211E118D1FAD300085F2E /* BDDReactiveCocoaSpecs-Info.plist */,
+				0BF211E218D1FAD300085F2E /* InfoPlist.strings */,
+				0BF211E718D1FAD300085F2E /* BDDReactiveCocoaSpecs-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E22BA06108788B3D8F3597F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0BD42F4A18E1CA9800B3A1FC /* _MESContinent.h */,
+				0BD42F4B18E1CA9800B3A1FC /* _MESContinent.m */,
+				0BD42F4C18E1CA9800B3A1FC /* _MESCountry.h */,
+				0BD42F4D18E1CA9800B3A1FC /* _MESCountry.m */,
+				0BD42F4E18E1CA9800B3A1FC /* _MESLanguage.h */,
+				0BD42F4F18E1CA9800B3A1FC /* _MESLanguage.m */,
+				E22BAB49B9BBC77342596388 /* MESModel.h */,
+				E22BA27A1554BE8384034168 /* MESModel.m */,
+				E22BA9F0FB7DEF4A214009B4 /* MESCountry.h */,
+				E22BAF9666CEA912A94F3DF3 /* MESContinent.m */,
+				E22BA352EF12D3A1041583FC /* MESContinent.h */,
+				E22BA3C6698FB579DF6A080F /* MESLanguage.h */,
+				E22BA7ED883018B7B6A72EF1 /* MESLanguage.m */,
+				E22BA4DE02F4B7FFBB0E0C4E /* MESCountry.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E22BA274E04CC16D25C7CD16 /* Legacy */ = {
+			isa = PBXGroup;
+			children = (
+				E22BA5350D6EE7516F2D1746 /* MESCounter.h */,
+				E22BA44F77257EBE4D7BA63C /* MESCounter.m */,
+				E22BAD776D083DDAE722BA3F /* MESCounterViewModel.h */,
+				E22BA0EAC3ABA609099FE593 /* MESCounterViewModel.m */,
+			);
+			path = Legacy;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0BF2119E18D1FA6900085F2E /* BDDReactiveCocoa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BF211D118D1FA6900085F2E /* Build configuration list for PBXNativeTarget "BDDReactiveCocoa" */;
+			buildPhases = (
+				73558E3B729143E7B7E08F2C /* Check Pods Manifest.lock */,
+				0BF2119B18D1FA6900085F2E /* Sources */,
+				0BF2119C18D1FA6900085F2E /* Frameworks */,
+				0BF2119D18D1FA6900085F2E /* Resources */,
+				D2DFEE3BFC8C4F868D4F5101 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BDDReactiveCocoa;
+			productName = BDDReactiveCocoa;
+			productReference = 0BF2119F18D1FA6900085F2E /* BDDReactiveCocoa.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0BF211DA18D1FAD300085F2E /* BDDReactiveCocoaSpecs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BF211EA18D1FAD300085F2E /* Build configuration list for PBXNativeTarget "BDDReactiveCocoaSpecs" */;
+			buildPhases = (
+				6C82470545D54BA8BA5B7372 /* Check Pods Manifest.lock */,
+				0BF211D718D1FAD300085F2E /* Sources */,
+				0BF211D818D1FAD300085F2E /* Frameworks */,
+				0BF211D918D1FAD300085F2E /* Resources */,
+				2DDD0A7AE5884DCB8B692958 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BF211E918D1FAD300085F2E /* PBXTargetDependency */,
+			);
+			name = BDDReactiveCocoaSpecs;
+			productName = BDDReactiveCocoaSpecs;
+			productReference = 0BF211DB18D1FAD300085F2E /* BDDReactiveCocoaSpecs.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0BF2119718D1FA6900085F2E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MES;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = MakeEatSee;
+				TargetAttributes = {
+					0BF211DA18D1FAD300085F2E = {
+						TestTargetID = 0BF2119E18D1FA6900085F2E;
+					};
+				};
+			};
+			buildConfigurationList = 0BF2119A18D1FA6900085F2E /* Build configuration list for PBXProject "BDDReactiveCocoa" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0BF2119618D1FA6900085F2E;
+			productRefGroup = 0BF211A018D1FA6900085F2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0BF2119E18D1FA6900085F2E /* BDDReactiveCocoa */,
+				0BF211DA18D1FAD300085F2E /* BDDReactiveCocoaSpecs */,
+				0B76779818E1C6EC0037767F /* Mogenerator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0BF2119D18D1FA6900085F2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BF211BB18D1FA6900085F2E /* Images.xcassets in Resources */,
+				0BF211AD18D1FA6900085F2E /* InfoPlist.strings in Resources */,
+				0BF211B618D1FA6900085F2E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BF211D918D1FAD300085F2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BF211E418D1FAD300085F2E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B76779C18E1C6FD0037767F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mogenerator -m LanguagesModel.xcdatamodeld/LanguagesModel.xcdatamodel -O BDDReactiveCocoa/Model --template-var arc=true";
+		};
+		2DDD0A7AE5884DCB8B692958 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-BDDReactiveCocoaSpecs-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C82470545D54BA8BA5B7372 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		73558E3B729143E7B7E08F2C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D2DFEE3BFC8C4F868D4F5101 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-BDDReactiveCocoa-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0BF2119B18D1FA6900085F2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BF211B318D1FA6900085F2E /* MESAppDelegate.m in Sources */,
+				0BD42F5118E1CA9800B3A1FC /* _MESCountry.m in Sources */,
+				0BD42F5A18E201CD00B3A1FC /* MESLanguagesViewController.m in Sources */,
+				0BD42F5718E201A800B3A1FC /* MESCountriesViewController.m in Sources */,
+				0BF211AF18D1FA6900085F2E /* main.m in Sources */,
+				0BCFAF2B18E58ABE00D9292D /* MESJsonViewController.m in Sources */,
+				0BD42F4918E1C94900B3A1FC /* LanguagesModel.xcdatamodeld in Sources */,
+				0BD42F5018E1CA9800B3A1FC /* _MESContinent.m in Sources */,
+				0BD42F5218E1CA9800B3A1FC /* _MESLanguage.m in Sources */,
+				E22BAFAF75D3471219648AD6 /* MESModel.m in Sources */,
+				E22BADD36978DF6194611A3B /* MESCounter.m in Sources */,
+				0B6B08C518DF035C00DCB5CA /* MESLanguageDetailViewController.m in Sources */,
+				E22BA30B47DA566099DC8597 /* MESCounterViewModel.m in Sources */,
+				E22BA8D2E77C17FFB874E9B9 /* MESContinent.m in Sources */,
+				E22BADE5A081F80191A35C99 /* MESLanguage.m in Sources */,
+				E22BAC7DED712F449304CED5 /* MESCountry.m in Sources */,
+				E22BAED0BFB9734DD67713D3 /* MESContinentViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BF211D718D1FAD300085F2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BF211E618D1FAD300085F2E /* BDDReactiveCocoaSpecs.m in Sources */,
+				E22BA4C7F373F435255188D4 /* BDDObjectModelSpecs.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0BF211E918D1FAD300085F2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0BF2119E18D1FA6900085F2E /* BDDReactiveCocoa */;
+			targetProxy = 0BF211E818D1FAD300085F2E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0BF211AB18D1FA6900085F2E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0BF211AC18D1FA6900085F2E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0BF211B418D1FA6900085F2E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0BF211B518D1FA6900085F2E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0BF211E218D1FAD300085F2E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0BF211E318D1FAD300085F2E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0B76779A18E1C6EC0037767F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0B76779B18E1C6EC0037767F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0BF211CF18D1FA6900085F2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		0BF211D018D1FA6900085F2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0BF211D218D1FA6900085F2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D55EE75199545C5B8A14AAC /* Pods-BDDReactiveCocoa.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BDDReactiveCocoa/BDDReactiveCocoa-Prefix.pch";
+				INFOPLIST_FILE = "BDDReactiveCocoa/BDDReactiveCocoa-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0BF211D318D1FA6900085F2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D55EE75199545C5B8A14AAC /* Pods-BDDReactiveCocoa.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BDDReactiveCocoa/BDDReactiveCocoa-Prefix.pch";
+				INFOPLIST_FILE = "BDDReactiveCocoa/BDDReactiveCocoa-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0BF211EB18D1FAD300085F2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A9FEA1A591C4A128E14B402 /* Pods-BDDReactiveCocoaSpecs.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BDDReactiveCocoa.app/BDDReactiveCocoa";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BDDReactiveCocoaSpecs/BDDReactiveCocoaSpecs-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BDDReactiveCocoaSpecs/BDDReactiveCocoaSpecs-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0BF211EC18D1FAD300085F2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A9FEA1A591C4A128E14B402 /* Pods-BDDReactiveCocoaSpecs.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BDDReactiveCocoa.app/BDDReactiveCocoa";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BDDReactiveCocoaSpecs/BDDReactiveCocoaSpecs-Prefix.pch";
+				INFOPLIST_FILE = "BDDReactiveCocoaSpecs/BDDReactiveCocoaSpecs-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B76779918E1C6EC0037767F /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B76779A18E1C6EC0037767F /* Debug */,
+				0B76779B18E1C6EC0037767F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0BF2119A18D1FA6900085F2E /* Build configuration list for PBXProject "BDDReactiveCocoa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BF211CF18D1FA6900085F2E /* Debug */,
+				0BF211D018D1FA6900085F2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0BF211D118D1FA6900085F2E /* Build configuration list for PBXNativeTarget "BDDReactiveCocoa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BF211D218D1FA6900085F2E /* Debug */,
+				0BF211D318D1FA6900085F2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0BF211EA18D1FAD300085F2E /* Build configuration list for PBXNativeTarget "BDDReactiveCocoaSpecs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BF211EB18D1FAD300085F2E /* Debug */,
+				0BF211EC18D1FAD300085F2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0BD42F4718E1C94900B3A1FC /* LanguagesModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0BD42F4818E1C94900B3A1FC /* LanguagesModel.xcdatamodel */,
+			);
+			currentVersion = 0BD42F4818E1C94900B3A1FC /* LanguagesModel.xcdatamodel */;
+			path = LanguagesModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 0BF2119718D1FA6900085F2E /* Project object */;
+}

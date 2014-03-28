@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="MESContinent" representedClassName="MESContinent" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="countries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MESCountry" inverseName="continent" inverseEntity="MESCountry" syncable="YES"/>
+    </entity>
+    <entity name="MESCountry" representedClassName="MESCountry" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="continent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MESContinent" inverseName="countries" inverseEntity="MESContinent" syncable="YES"/>
+        <relationship name="officialLanguages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MESLanguage" inverseName="countries" inverseEntity="MESLanguage" syncable="YES"/>
+    </entity>
+    <entity name="MESLanguage" representedClassName="MESLanguage" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numSpeakers" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="sample" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="countries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MESCountry" inverseName="officialLanguages" inverseEntity="MESCountry" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="MESContinent" positionX="160" positionY="192" width="128" height="73"/>
+        <element name="MESCountry" positionX="342" positionY="192" width="128" height="88"/>
+        <element name="MESLanguage" positionX="538" positionY="194" width="128" height="103"/>
+    </elements>
+</model>
