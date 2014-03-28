@@ -20,11 +20,14 @@
 #import "NSManagedObject+MagicalRecord.h"
 #import "NSManagedObjectContext+MagicalRecord.h"
 #import "NSManagedObjectContext+MagicalSaves.h"
+#import "AutoCoding.h"
 
 #define HC_SHORTHAND
 #import <OCHamcrest/OCHamcrest.h>
 #define MOCKITO_SHORTHAND
+
 #import <OCMockito/OCMockito.h>
+
 
 SpecBegin(BDDObjectModel)
 
@@ -36,7 +39,7 @@ describe(@"Serializing Core Data objects with AutoCoding", ^{
         [MagicalRecord cleanUp];
     });
     context(@"when working with AutoCoding", ^{
-        it(@"should be freaking awesome", ^{
+        it(@"should be able to encode Core Data objects with NSKeyedArchiver and NSKeyedUnarchiver", ^{
             MESContinent *europe = [MESContinent MR_createEntity];
             europe.name = @"Europe";
             MESCountry *germany = [MESCountry MR_createEntity];
@@ -52,16 +55,33 @@ describe(@"Serializing Core Data objects with AutoCoding", ^{
 
             // Save the context.
             [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:nil];
-            
-            // Now; write europe
-            NSError *error = nil;
-            NSData *data = [NSJSONSerialization dataWithJSONObject:[HRCoder archivedJSONWithRootObject:europe]
-                                                           options:NSJSONWritingPrettyPrinted
-                                                             error:&error];
-            NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            expect(string).to.contain(@"Germany");
-            expect(string).to.contain(@"Austria");
-            expect(string).to.contain(@"Deutsch");
+
+            void (^makeAssertions)(MESContinent *continent) = ^(MESContinent *continent) {
+                NSArray *countries = [continent.countries allObjects];
+                NSArray *countryNames = [countries map:^id(MESCountry *country) {
+                    return country.name;
+                }];
+                expect(countryNames).to.contain(@"Austria");
+                expect(countryNames).to.contain(@"Germany");
+
+                // There should be two countries; and both countries should point to one German instance
+                expect([countries count]).to.equal(2);
+                MESCountry * c1 = countries[0];
+                MESCountry * c2 = countries[0];
+                MESLanguage *firstCountryLanguage = [c1.officialLanguages allObjects][0];
+                MESLanguage *secondCountryLanguage = [c2.officialLanguages allObjects][0];
+                expect(firstCountryLanguage).to.beIdenticalTo(secondCountryLanguage);
+                expect(firstCountryLanguage.name).to.equal(@"Deutsch");
+            };
+
+            makeAssertions(europe);
+
+            // Store 'europe' Continent data with the NSKeyedArchiver
+            NSData *outgoingData = [NSKeyedArchiver archivedDataWithRootObject:europe];
+            // Pretend that we've stored it somewhere we're not retrieving it
+            NSData *incomingData = outgoingData;
+            MESContinent *incomingEurope = [NSKeyedUnarchiver unarchiveObjectWithData:incomingData];
+            makeAssertions(incomingEurope);
         });
     });
 });
